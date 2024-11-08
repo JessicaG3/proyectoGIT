@@ -15,6 +15,7 @@ public class operaciones {
         System.out.println("2: Resta");
         System.out.println("3: Multiplicación");
         System.out.println("4: División");
+        System.out.println("5: Resto de la división");
         System.out.print("Introduce el número de la operación: ");
         int opcion = scanner.nextInt();
 
@@ -34,6 +35,14 @@ public class operaciones {
             case 4:
                 if (numero2 != 0) {
                     resultado = numero1 / numero2;
+                } else {
+                    System.out.println("Error: No se puede dividir entre cero.");
+                    operacionValida = false;
+                }
+                break;
+            case 5:
+                if (numero2 != 0) {
+                    resultado = numero1 % numero2;
                 } else {
                     System.out.println("Error: No se puede dividir entre cero.");
                     operacionValida = false;
